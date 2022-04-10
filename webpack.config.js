@@ -8,7 +8,7 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 })
 
 module.exports = {
-  entry: path.join(__dirname, 'index.web.tsx'),
+  entry: path.join(__dirname, 'index.web.js'),
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '/build'),
