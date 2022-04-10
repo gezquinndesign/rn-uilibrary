@@ -1,14 +1,16 @@
 # react-native-storybook-boilerplate
 
 Building a UI library for React Native together with storybook is a good experience, but it's hard to display the components on the web, therefore
-I want to transpile the react-native component through the react-native-web project so I can display them easily on the web. 
+I want to transpile the react-native component through the react-native-web project so I can display them easily on the web.
 
-It's the ultimate library development setup meant for kickstarting ui library development for react-native. 
+It's the ultimate library development setup meant for kickstarting ui library development for react-native.
 
 In a nutshell there's two different setups of Storybook running in parallel:
+
 1. **React Native + Storybook/React-Native**
 
 It was installed following the normal steps of
+
 - doing a fresh `npx react-native init`
 - running `npx -p @storybook/cli sb init` and choosing yes when asked if install @storybook/react-native-server
 - installing & configuring `react-native-storybook-loader` the project can be found here: [react-native-storybook-loader](https://github.com/elderfo/react-native-storybook-loader)
@@ -27,15 +29,16 @@ It was roughtly done like this:
 
 Goals of this repo:
 
-| ToDo| Status |
-| --- | ----- |
-| setup react native | ✅ |
-| setup @storybook/react-native-server for react native UI development | ✅ |
-| setup react from scratch | ✅ |
-| setup @storybook/react to run as a seperate storybook | ✅ |
-| Build serveable storybook site with react-native-web display of the react-native components. | ✅ |
+| ToDo                                                                                         | Status |
+| -------------------------------------------------------------------------------------------- | ------ |
+| setup react native                                                                           | ✅     |
+| setup @storybook/react-native-server for react native UI development                         | ✅     |
+| setup react from scratch                                                                     | ✅     |
+| setup @storybook/react to run as a seperate storybook                                        | ✅     |
+| Build serveable storybook site with react-native-web display of the react-native components. | ✅     |
 
 ## Clone Command
+
 ```
 git clone git@github.com:ugglr/react-native-storybook-boilerplate.git
 ```
@@ -45,25 +48,33 @@ git clone git@github.com:ugglr/react-native-storybook-boilerplate.git
 In root folder the following scripts are available
 
 - Run React Native Storybook Developer Server
+
 ```
 yarn run storybook
 ```
+
 - Run Storybook on iOS simulator
+
 ```
 yarn run ios
 ```
+
 - Run Storybook on Android emulator
+
 ```
 yarn run android
 ```
+
 - Run Storybook Web Developer server (powered with React Native Web)
+
 ```
 yarn run storybook-web
 ```
+
 - Build serveable Storybook static site (To-Do)
+
 ```
 yarn run build:storybook-web
 
 --> ./storybook-static
 ```
-

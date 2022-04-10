@@ -2,13 +2,12 @@
 
 ## In our pursuit of creating the ultimate UI development starting point, it is time to take the first step with react-native-web
 
-
-> This is the second part of a series where I go through all the steps of creating [The Ultimate React Native UI Library starter repo](https://dev.to/ugglr/series-the-ultimate-react-native-ui-library-starter-repo-bho). Please visit the first post (just linked 👆🏻) for a general description of what we are trying to acomplish abd where all the Steps are numbered + linked. 
+> This is the second part of a series where I go through all the steps of creating [The Ultimate React Native UI Library starter repo](https://dev.to/ugglr/series-the-ultimate-react-native-ui-library-starter-repo-bho). Please visit the first post (just linked 👆🏻) for a general description of what we are trying to acomplish abd where all the Steps are numbered + linked.
 
 > The finished source code can be found here [react-native-storybook-boilerplate](https://github.com/ugglr/react-native-storybook-boilerplate)
 
+What's covered in this post? ->
 
-What's covered in this post? -> 
 - setting up react from scratch
   - installation
   - webpack
@@ -17,41 +16,45 @@ What's covered in this post? ->
   - installation
   - webpack alias configuration
 
-
 _Please note that this is not a webpack or babel tutorial so I will more or less not cover the basics of those_
 
 If you want to go really in depth in how to set up React from scratch I really recommend a tutorial series from [codecademy](https://www.codecademy.com):
+
 - [React Setup Part 1: React and ReactDOM](https://www.codecademy.com/articles/react-setup-i)
 - [React Setup Part 2: Babel](https://www.codecademy.com/articles/react-setup-ii)
 - [React Setup Part 3: Webpack](https://www.codecademy.com/articles/react-setup-iii)
 - [React Setup Part 4: HTMLWebpackPlugin](https://www.codecademy.com/articles/react-setup-iv)
 - [React Setup Part 5: Conclusion](https://www.codecademy.com/articles/react-setup-v)
-  
-I thought that series was very good.
 
+I thought that series was very good.
 
 ## Setting up React - Installing our dependencies
 
-If you are following along from the first part in the series you have a "normal" `react-native` and `storbook` already set up and running locally, and now it's time to add `React` into the mix. 
+If you are following along from the first part in the series you have a "normal" `react-native` and `storbook` already set up and running locally, and now it's time to add `React` into the mix.
 
 **installation**
 
 Obviously we need react, but it comes with the react-native installation but we need to add `react-dom` ->
+
 ```
 yarn add react-dom
 ```
+
 and then we need to install our babel dependencies babel
+
 ```
 yarn add --dev @babel/core babel-loader @babel/preset-react @babel/preset-env
 ```
+
 Then we also need to ochestrate the packaging so let's install webpack also while we are at it:
+
 ```
 yarn add --dev webpack webpack-cli webpack-dev-server html-webpack-plugin
 ```
 
 ## Add scripts to package.json
 
-You can do this in any order you like but, I for some reason, like to add scripts first. I think it gives me a sense of what I'm trying to acomplish. 
+You can do this in any order you like but, I for some reason, like to add scripts first. I think it gives me a sense of what I'm trying to acomplish.
 
 ```json
 "scripts": {
@@ -117,7 +120,7 @@ Here's a rough description:
 | output | Configuration for the output files from react. `filename` gives the packed javascript a name. `path` sets an output folder for the packed files                                                                                                   |
 | rules  | `test` is a regular expression which matches to our source files, i.e. `*.js`. `exclude` excludes files we don't want webpack to touch. `use` this is where we plug in `babel` i.e. the stuff that will transform our react code into vanilla js. |
 
-After webpack are dont with the JS it needs to make a new HTML file as well, that's where `HTMLWebpackPluginConfig` comes in, please refer to this article for a better description: [React Setup, Part IV: HTMLWebpackPlugin](https://www.codecademy.com/articles/react-setup-iv).  
+After webpack are dont with the JS it needs to make a new HTML file as well, that's where `HTMLWebpackPluginConfig` comes in, please refer to this article for a better description: [React Setup, Part IV: HTMLWebpackPlugin](https://www.codecademy.com/articles/react-setup-iv).
 
 Let's take a look at the code for the `HTMLWebpackPlugin` closer:
 
@@ -130,11 +133,11 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 ```
 
 - `template`: It tells our plugin what template file it should use and copy to our `./build` folder. I set it to a file in the folder `public` and the file name is `index.html`. (We shall not forget to create these.)
-- `filename`: Is the name of the newly created file which it copies. As I mentioned above this file will wind up in `./build` folder. 
-- `inject`: Is where the our JavaScript script tag will be injected. Both `head` and `body` are valid options. 
+- `filename`: Is the name of the newly created file which it copies. As I mentioned above this file will wind up in `./build` folder.
+- `inject`: Is where the our JavaScript script tag will be injected. Both `head` and `body` are valid options.
 
 **What's the `path` stuff?**
-It's just a way to concatenate path-strings instead of using a `+`sign, `__dirname` meaning the current directory which the file is in. 
+It's just a way to concatenate path-strings instead of using a `+`sign, `__dirname` meaning the current directory which the file is in.
 
 ## Add entry files
 
@@ -215,7 +218,7 @@ Hopefully this starts the Webpack development server for you and you see this pa
 
 For those who are not quite familiar `react-native-web` makes it possible to use the `react-native-api` to write components for the web. It transforms `View` to `div` etc. so it's readable by a web browser. Really cool stuff!
 
->"React Native for Web" makes it possible to run React Native components and APIs on the web using React DOM.
+> "React Native for Web" makes it possible to run React Native components and APIs on the web using React DOM.
 
 It's open source and do check it out!
 [react-native-web](https://github.com/necolas/react-native-web)
@@ -249,18 +252,18 @@ That's enough configuration for now!
 Let's modify our `App.web.js` to use the `react-native-api`.
 
 ```js
-import React from 'react';
-import {View, Text} from 'react-native';
+import React from 'react'
+import { View, Text } from 'react-native'
 
 function App() {
   return (
     <View>
       <Text>Hello world from react native</Text>
     </View>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 run yet again:
@@ -278,8 +281,8 @@ With this we can now use the whole `react-native`-api for the web, you can have 
 To extra check this we can, for instance, add an `<ActivityIndicator />` component to our `App.web.js`
 
 ```js
-import React from 'react';
-import {View, Text, ActivityIndicator} from 'react-native';
+import React from 'react'
+import { View, Text, ActivityIndicator } from 'react-native'
 
 function App() {
   return (
@@ -287,10 +290,10 @@ function App() {
       <Text>Hello world from react native</Text>
       <ActivityIndicator />
     </View>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 And here's the result!
