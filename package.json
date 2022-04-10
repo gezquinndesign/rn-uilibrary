@@ -1,9 +1,9 @@
 {
-  "name": "RNStorybook",
+  "name": "uilibrary",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "ios": "yarn run prestorybook && react-native -p 8081 un-ios",
+    "ios": "yarn run prestorybook && react-native -p 8081 run-ios",
     "android": "yarn run prestorybook && react-native -p 8082 run-android",
     "sb-mobile": "start-storybook -p 7007",
     "sb-web": "./node_modules/@storybook/react/bin/index.js -p 8083",
