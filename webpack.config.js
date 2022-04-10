@@ -8,12 +8,13 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 })
 
 module.exports = {
-  entry: path.join(__dirname, 'index.web.js'),
+  entry: path.join(__dirname, 'index.web.tsx'),
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '/build'),
   },
   resolve: {
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
     alias: {
       'react-native$': 'react-native-web',
       '@storybook/react-native': '@storybook/react',
@@ -23,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|mjs|jsx|ts|tsx)$/,
         exclude: /node_modules\/(?!()\/).*/,
         use: {
           loader: 'babel-loader',
@@ -37,7 +38,7 @@ module.exports = {
   plugins: [HTMLWebpackPluginConfig],
   devServer: {
     historyApiFallback: true,
-    contentBase: './',
+    static: './',
     hot: true,
   },
 }
