@@ -63,3 +63,5 @@ buck-out/
 storybook-static
 
 dist
+
+.env
