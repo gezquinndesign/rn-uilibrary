@@ -13,7 +13,7 @@
     "android": "yarn run prestorybook && react-native --port 8082 run-android",
     "sb-mobile": "start-storybook -p 7007",
     "sb-web": "./node_modules/@storybook/react/bin/index.js -p 8083",
-    "postinstall": "test -f ./webpack.config.js && echo 'file exisits' && npm run ios:bundle",
+    "postinstall": "if -f ./webpack.config.js; then echo \"Running ios:bundle.\" && npm run ios:bundle else echo \"\" fi\"",
     "ios:bundle": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
     "start": "react-native start",
     "test": "jest",
