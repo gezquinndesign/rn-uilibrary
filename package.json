@@ -2,6 +2,17 @@
   "name": "rn-uilibrary",
   "version": "0.0.1",
   "private": false,
+  "license": "ISC",
+  "description": "React Native UI Library utilising React Native Web",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gezquinndesign/rn-uilibrary.git"
+  },
+  "author": "Gez Quinn",
+  "bugs": {
+    "url": "https://github.com/gezquinndesign/rn-uilibrary/issues"
+  },
+  "homepage": "https://github.com/gezquinndesign/rn-uilibrary#readme",
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
