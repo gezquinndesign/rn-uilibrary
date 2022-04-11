@@ -1,5 +1,0 @@
-export * as Button from './Button/Button'
-export * as StyledComponent from './StyledComponent/StyledComponent'
-export * as StyledPressable from './StyledPressable/StyledPressable'
-export * as TestComponent1 from './TestComponent1/TestComponent1'
-export * as TestComponent2 from './TestComponent2/TestComponent2'
