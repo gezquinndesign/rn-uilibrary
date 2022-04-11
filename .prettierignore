@@ -8,3 +8,6 @@ dist
 node_modules
 mobile/android
 mobile/ios
+storybook-static
+build
+dist

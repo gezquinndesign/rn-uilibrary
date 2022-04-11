@@ -5,7 +5,12 @@ import { Style } from './style'
 
 const styles = StyleSheet.create(Style)
 
-export default function ButtonNativeComponent({ text, onClick, color, textColor }: ButtonPropsInterface) {
+export default function ButtonNativeComponent({
+  text,
+  onClick,
+  color,
+  textColor,
+}: ButtonPropsInterface) {
   return (
     <View style={styles.buttonContainer}>
       <TouchableOpacity
@@ -13,7 +18,9 @@ export default function ButtonNativeComponent({ text, onClick, color, textColor 
         onPress={onClick}
         activeOpacity={0.8}
       >
-        <Text style={[styles.buttonText, !!textColor && { color: textColor }]}>NATIVE {text}</Text>
+        <Text style={[styles.buttonText, !!textColor && { color: textColor }]}>
+          NATIVE {text}
+        </Text>
       </TouchableOpacity>
     </View>
   )
