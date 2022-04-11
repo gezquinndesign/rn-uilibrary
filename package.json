@@ -37,7 +37,8 @@
     "dist:babel:cjs": "BABEL_ENV=cjs babel src --source-maps --extensions \".js,.ts,.tsx\" --ignore \"src/**/*.stories.tsx,src/**/*.stories.ts\" --out-dir dist --presets=@babel/env",
     "dist:types": "tsc -p tsconfig.gen-dts.json",
     "clean": "rimraf dist",
-    "copy-files": "copyfiles -u 1 \"src/**/*.scss\" \"src/**/*.css\" dist"
+    "copy-files": "copyfiles -u 1 \"src/**/*.scss\" \"src/**/*.css\" dist",
+    "prepare": "husky install"
   },
   "config": {
     "react-native-storybook-loader": {
@@ -86,9 +87,11 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "eslint-plugin-react-native": "^3.8.1",
     "html-webpack-plugin": "^4.3.0",
+    "husky": "^7.0.4",
     "jest": "^25.1.0",
+    "lint-staged": "^12.3.7",
     "metro-react-native-babel-preset": "^0.59.0",
-    "prettier": "^2.0.5",
+    "prettier": "^2.6.2",
     "react": "16.13.1",
     "react-dom": "^16.13.1",
     "react-native": "0.68.0",
@@ -104,5 +107,18 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json,html,md,css}": [
+      "prettier --write"
+    ]
   }
 }
