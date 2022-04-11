@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "RNStorybook.app"
-               BlueprintName = "RNStorybook"
-               ReferencedContainer = "container:RNStorybook.xcodeproj">
+               BuildableName = "uilibrary.app"
+               BlueprintName = "uilibrary"
+               ReferencedContainer = "container:uilibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "RNStorybookTests.xctest"
-               BlueprintName = "RNStorybookTests"
-               ReferencedContainer = "container:RNStorybook.xcodeproj">
+               BuildableName = "uilibraryTests.xctest"
+               BlueprintName = "uilibraryTests"
+               ReferencedContainer = "container:uilibrary.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RNStorybook.app"
-            BlueprintName = "RNStorybook"
-            ReferencedContainer = "container:RNStorybook.xcodeproj">
+            BuildableName = "uilibrary.app"
+            BlueprintName = "uilibrary"
+            ReferencedContainer = "container:uilibrary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RNStorybook.app"
-            BlueprintName = "RNStorybook"
-            ReferencedContainer = "container:RNStorybook.xcodeproj">
+            BuildableName = "uilibrary.app"
+            BlueprintName = "uilibrary"
+            ReferencedContainer = "container:uilibrary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "RNStorybook-tvOS.app"
-               BlueprintName = "RNStorybook-tvOS"
-               ReferencedContainer = "container:RNStorybook.xcodeproj">
+               BuildableName = "uilibrary-tvOS.app"
+               BlueprintName = "uilibrary-tvOS"
+               ReferencedContainer = "container:uilibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "RNStorybook-tvOSTests.xctest"
-               BlueprintName = "RNStorybook-tvOSTests"
-               ReferencedContainer = "container:RNStorybook.xcodeproj">
+               BuildableName = "uilibrary-tvOSTests.xctest"
+               BlueprintName = "uilibrary-tvOSTests"
+               ReferencedContainer = "container:uilibrary.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "RNStorybook-tvOS.app"
-            BlueprintName = "RNStorybook-tvOS"
-            ReferencedContainer = "container:RNStorybook.xcodeproj">
+            BuildableName = "uilibrary-tvOS.app"
+            BlueprintName = "uilibrary-tvOS"
+            ReferencedContainer = "container:uilibrary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "RNStorybook-tvOS.app"
-            BlueprintName = "RNStorybook-tvOS"
-            ReferencedContainer = "container:RNStorybook.xcodeproj">
+            BuildableName = "uilibrary-tvOS.app"
+            BlueprintName = "uilibrary-tvOS"
+            ReferencedContainer = "container:uilibrary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

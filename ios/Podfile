@@ -5,12 +5,12 @@ pod 'boost', :podspec => '../node_modules/react-native/third-party-podspecs/boos
 
 platform :ios, '11.0'
 
-target 'RNStorybook' do
+target 'uilibrary' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'RNStorybookTests' do
+  target 'uilibraryTests' do
     inherit! :complete
     # Pods for testing
   end
