@@ -13,12 +13,10 @@ const Text = styled.Text`
   color: white;
 `
 
-function StyledPressable() {
+export default function StyledPressable() {
   return (
     <PressableBase>
       <Text>Button</Text>
     </PressableBase>
   )
 }
-
-export default StyledPressable

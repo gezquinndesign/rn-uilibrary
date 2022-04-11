@@ -12,12 +12,10 @@ const Text = styled.Text`
   color: cyan;
 `
 
-function StyledComponent() {
+export default function StyledComponent() {
   return (
     <Base>
       <Text>Styled Component</Text>
     </Base>
   )
 }
-
-export default StyledComponent

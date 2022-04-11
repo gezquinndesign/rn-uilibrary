@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import Button from './button'
+import Button from './Button'
 
 export const Template = (props) => <Button text={props.text} onClick={props.onClick} />
 
