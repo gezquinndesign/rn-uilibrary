@@ -97,5 +97,10 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  "exclude": [
+    "node_modules", "babel.config.js", "metro.config.js", "jest.config.js", "./src/**/**.test.tsx", "./src/**/**.test.ts", "./src/**/**.stories.ts", "./src/**/**.stories.tsx", "./src/**/examples/**"
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "rootDirs": ["src"]
 }
