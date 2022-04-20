@@ -3,4 +3,5 @@ export interface ButtonPropsInterface {
   text: string
   color?: string
   textColor?: string
+  disabled?: boolean
 }
