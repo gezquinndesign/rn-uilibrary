@@ -30,3 +30,11 @@ This repo and the Monorepo are designed to be used together to develop a React N
 - Select your Development OS and Target OS (in this case, Android) and follow the instructions there. As of writing this README (April 2022), the summary is this: You will need Node, Watchman, the React Native command line interface, a JDK, and Android Studio. The instructions for installing and configuring Android Studio are quite in-depth (UP TO HERE: "Configure the ANDROID_SDK_ROOT environment variable")
 - Run `yarn sb-mobile`. You'll notice that a screen comes up in Storybook in the browser asking you to do more things. Do not fret!
 - It wants you to connect a device. Open a new terminal tab and run `yarn android` or `yarn ios`
+
+- Open Android Studio. File > Open > select the 'android' folder in this repo and open it. This will take a while!
+
+- If you don't have a virtual device installed in Android studio, you'll notice there's an error if you try to hit the 'play' button. You'll need to download a device.
+
+![download button](./README_images/downloadbutton.png)
+
+- If you have a real connected Android device and you notice that Storybook is forever loading, run `adb reverse tcp:8081 tcp:8081`. This will map the port on your connected device to the same port on your machine.
